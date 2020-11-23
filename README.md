@@ -34,3 +34,35 @@ The solution to Task -2 started by defined python function. It is a block of cod
 
 The code started by importing python library called numpy. I define the functions by declaring the data, loop through the times(100), using random.ranint method to return the selected number range specified(2,12), pass the data to return the result.
 
+#### import python library called numpy
+import numpy as np
+
+#### define function by declaring the data or arguments
+
+def roll_dice(rolls, sides):
+   
+   k = 2
+    
+    n =100
+ 
+ #### loop through the dice roll range  
+    
+    dice = {i:0 for i in range(2, 13)} 
+   
+   #### loop through the times 
+    
+    for n in range(rolls):
+   
+   #### method of returning the selected specified number range
+        
+        dice[np.random.randint(k, sides)] += 1
+    
+  #### return the selected number range  
+    
+    return(dice)
+
+#### passing the data or arguments
+
+roll_dice (100,  13) 
+
+
