@@ -13,13 +13,13 @@ I explained the overview of the Task is to use List as input and Dictionary as o
 I started the code by creating List and Dictionary, I loop through the List, using dictionary get method() to return the value for a given key which was set as a default and return the list in a dictionary
   
 ##### create list
-list =  'A', 'A', 'B', 'C', 'A'
+list = [ 'A', 'A', 'B', 'C', 'A']
 #### create dictionary
 dict = {}
 ##### loop through the list
 for i in list:
     
-    #### using dict get method()
+    ##### using dict get method()
     dict[i] = dict.get(i,0)+1 
 
 print(dict)
