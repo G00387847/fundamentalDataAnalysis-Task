@@ -18,7 +18,10 @@ list =  'A', 'A', 'B', 'C', 'A'
 dict = {}
 ##### loop through the list
 for i in list:
-    dict[i] = dict.get(i,0)+1 ##### using dict get method()  
+    
+    #### using dict get method()
+    dict[i] = dict.get(i,0)+1 
+
 print(dict)
 
 
