@@ -108,3 +108,25 @@ s
 #### #using histogram plot to visualized the result
 
 plt.hist(s) # using histogram plot to visualized the result
+
+
+# Refrences:
+
+
+- [Stack Overflow](https://stackoverflow.com/questions/5606421/python-letter-count-dict)
+
+- [Python function](http://openbookproject.net/)
+
+- [w3school.com](https://www.w3schools.com/python/python_lists.asp)
+
+- [stackoverflow](https://stackoverflow.com/questions/52705611/trying-to-find-how-often-a-dice-roll-result-occurs-in-a-list-of-randomly-rolled)
+
+- [https://www.reddit.com/r/learnpython/comments/55zdez/putting_outcomes_of_dice_roll_in_dictionary/]
+
+- [W3school](https://www.w3schools.com/python/python_functions.asp#:~:text=%E2%9D%AE%20Previous%20Next%20%E2%9D%AF,return%20data%20as%20a%20result.)
+
+- [w3school.com](https://www.w3schools.com/python/python_dictionaries.asp)  
+
+[Numpy](https://numpy.org/doc/stable/reference/random/generated/numpy.random.binomial.html#numpy-random-binomial)
+
+[Utexas.edu](https://het.as.utexas.edu/HET/Software/Numpy/reference/generated/numpy.random.binomial.html)
