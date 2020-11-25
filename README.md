@@ -13,13 +13,18 @@ I explained the overview of the Task is to use List as input and Dictionary as o
 I started the code by creating List and Dictionary, I loop through the List, using dictionary get method() to return the value for a given key which was set as a default and return the list in a dictionary
   
 #####  #create list
+
 list = [ 'A', 'A', 'B', 'C', 'A']
+
 #### #create dictionary
+
 dict = {}
+
 ##### #loop through the list
 for i in list:
     
    #### #using dict get method()
+    
     dict[i] = dict.get(i,0)+1 
 
 print(dict)
@@ -37,27 +42,27 @@ The code started by importing python library called numpy. I define the function
 #### import python library called numpy
 import numpy as np
 
-#### define function by declaring the data or arguments
+#### #define function by declaring the data or arguments
 
 def roll_dice(rolls, sides):
    
    k = 2
     
-    n =100
+   n =100
  
- #### loop through the dice roll range  
+ #### #loop through the dice roll range  
     
     dice = {i:0 for i in range(2, 13)} 
    
-   #### loop through the times 
+   #### #loop through the times 
     
     for n in range(rolls):
    
-   #### method of returning the selected specified number range
+   #### #method of returning the selected specified number range
         
         dice[np.random.randint(k, sides)] += 1
     
-  #### return the selected number range  
+  #### #return the selected number range  
     
     return(dice)
 
@@ -87,13 +92,17 @@ code.
 I started writing the code by first, import standard python libraries called matplotlib for visualization of the result and numpy for working with arrays. I define the number of each probability trials, I use numpy.ramdom.biomial distribution method for the result of flipping the coin 100 times and tested it 1000 times and finally I use histogram plot to visualized the result.
 
 #### #import libraries
+
 import matplotlib.pyplot as plt
+
 import numpy as np
 
 #### #number of each probability trials
+
 n, p = 100, .5
 
-#### #result of flippinga coin 100 time was tested 1000 time. 
+#### #result of flipping coin 100 time was tested 1000 time. 
+
 s = np.random.binomial(n, p, 1000)
 s
 #### #using histogram plot to visualized the result
