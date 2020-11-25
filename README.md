@@ -12,14 +12,14 @@ I explained the overview of the Task is to use List as input and Dictionary as o
 
 I started the code by creating List and Dictionary, I loop through the List, using dictionary get method() to return the value for a given key which was set as a default and return the list in a dictionary
   
-##### create list
+#####  #create list
 list = [ 'A', 'A', 'B', 'C', 'A']
-#### create dictionary
+#### #create dictionary
 dict = {}
-##### loop through the list
+##### #loop through the list
 for i in list:
     
-   #### using dict get method()
+   #### #using dict get method()
     dict[i] = dict.get(i,0)+1 
 
 print(dict)
@@ -66,3 +66,36 @@ def roll_dice(rolls, sides):
 roll_dice (100,  13) 
 
 
+# Task 3 - Numpy.Random.Binomial
+
+
+The numpy.random.binomial function can be used to
+simulate flipping a coin with a 50/50 chance of heads or tails. Interestingly, if a
+coin is flipped many times then the number of heads is well approximated by a
+bell-shaped curve. For instance, if we flip a coin 100 times in a row the chance of
+getting 50 heads is relatively high, the chances of getting 0 or 100 heads is relatively
+low, and the chances of getting any other number of heads decreases as you move
+away from 50 in either direction towards 0 or 100. Write some python code that
+simulates flipping a coin 100 times. Then run this code 1,000 times, keeping track
+of the number of heads in each of the 1,000 simulations. Select an appropriate
+plot to depict the resulting list of 1,000 numbers, showing that it roughly follows
+a bell-shaped curve. You should explain your work in a Markdown cell above the
+code.
+
+# Solution
+
+I started writing the code by first, import standard python libraries called matplotlib for visualization of the result and numpy for working with arrays. I define the number of each probability trials, I use numpy.ramdom.biomial distribution method for the result of flipping the coin 100 times and tested it 1000 times and finally I use histogram plot to visualized the result.
+
+#### #import libraries
+import matplotlib.pyplot as plt
+import numpy as np
+
+#### #number of each probability trials
+n, p = 100, .5
+
+#### #result of flippinga coin 100 time was tested 1000 time. 
+s = np.random.binomial(n, p, 1000)
+s
+#### #using histogram plot to visualized the result
+
+plt.hist(s) # using histogram plot to visualized the result
