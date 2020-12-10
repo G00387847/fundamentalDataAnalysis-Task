@@ -12,14 +12,19 @@ I explained the overview of the Task is to use List as input and Dictionary as o
 
 I started the code by creating List and Dictionary, I loop through the List, using dictionary get method() to return the value for a given key which was set as a default and return the list in a dictionary
   
-##### create list
+#####  #create list
+
 list = [ 'A', 'A', 'B', 'C', 'A']
-#### create dictionary
+
+#### #create dictionary
+
 dict = {}
-##### loop through the list
+
+##### #loop through the list
 for i in list:
     
-   #### using dict get method()
+   #### #using dict get method()
+    
     dict[i] = dict.get(i,0)+1 
 
 print(dict)
@@ -37,27 +42,27 @@ The code started by importing python library called numpy. I define the function
 #### import python library called numpy
 import numpy as np
 
-#### define function by declaring the data or arguments
+#### #define function by declaring the data or arguments
 
 def roll_dice(rolls, sides):
    
    k = 2
     
-    n =100
+   n =100
  
- #### loop through the dice roll range  
+ #### #loop through the dice roll range  
     
     dice = {i:0 for i in range(2, 13)} 
    
-   #### loop through the times 
+   #### #loop through the times 
     
     for n in range(rolls):
    
-   #### method of returning the selected specified number range
+   #### #method of returning the selected specified number range
         
         dice[np.random.randint(k, sides)] += 1
     
-  #### return the selected number range  
+  #### #return the selected number range  
     
     return(dice)
 
@@ -66,3 +71,62 @@ def roll_dice(rolls, sides):
 roll_dice (100,  13) 
 
 
+# Task 3 - Numpy.Random.Binomial
+
+
+The numpy.random.binomial function can be used to
+simulate flipping a coin with a 50/50 chance of heads or tails. Interestingly, if a
+coin is flipped many times then the number of heads is well approximated by a
+bell-shaped curve. For instance, if we flip a coin 100 times in a row the chance of
+getting 50 heads is relatively high, the chances of getting 0 or 100 heads is relatively
+low, and the chances of getting any other number of heads decreases as you move
+away from 50 in either direction towards 0 or 100. Write some python code that
+simulates flipping a coin 100 times. Then run this code 1,000 times, keeping track
+of the number of heads in each of the 1,000 simulations. Select an appropriate
+plot to depict the resulting list of 1,000 numbers, showing that it roughly follows
+a bell-shaped curve. You should explain your work in a Markdown cell above the
+code.
+
+# Solution
+
+I started writing the code by first, import standard python libraries called matplotlib for visualization of the result and numpy for working with arrays. I define the number of each probability trials, I use numpy.ramdom.biomial distribution method for the result of flipping the coin 100 times and tested it 1000 times and finally I use histogram plot to visualized the result.
+
+#### #import libraries
+
+import matplotlib.pyplot as plt
+
+import numpy as np
+
+#### #number of each probability trials
+
+n, p = 100, .5
+
+#### #result of flipping coin 100 time was tested 1000 time. 
+
+s = np.random.binomial(n, p, 1000)
+s
+#### #using histogram plot to visualized the result
+
+plt.hist(s) # using histogram plot to visualized the result
+
+
+# Refrences:
+
+
+- [Stack Overflow](https://stackoverflow.com/questions/5606421/python-letter-count-dict)
+
+- [Python function](http://openbookproject.net/)
+
+- [w3school.com](https://www.w3schools.com/python/python_lists.asp)
+
+- [stackoverflow](https://stackoverflow.com/questions/52705611/trying-to-find-how-often-a-dice-roll-result-occurs-in-a-list-of-randomly-rolled)
+
+- [https://www.reddit.com/r/learnpython/comments/55zdez/putting_outcomes_of_dice_roll_in_dictionary/]
+
+- [W3school](https://www.w3schools.com/python/python_functions.asp#:~:text=%E2%9D%AE%20Previous%20Next%20%E2%9D%AF,return%20data%20as%20a%20result.)
+
+- [w3school.com](https://www.w3schools.com/python/python_dictionaries.asp)  
+
+[Numpy](https://numpy.org/doc/stable/reference/random/generated/numpy.random.binomial.html#numpy-random-binomial)
+
+[Utexas.edu](https://het.as.utexas.edu/HET/Software/Numpy/reference/generated/numpy.random.binomial.html)
